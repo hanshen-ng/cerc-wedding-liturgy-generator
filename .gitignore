@@ -12,6 +12,7 @@ dist
 dist-electron
 dist-react
 *.local
+*.db
 
 # Editor directories and files
 .vscode/*
