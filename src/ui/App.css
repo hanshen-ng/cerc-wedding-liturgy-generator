@@ -1,7 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: oklch(1 0 0);
@@ -117,14 +118,18 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
 }
 
+/* SECTION: CUSTOM CSS DEFINITIONS */
 #root {
   display: flex;
   flex-direction: row;
   height: 100vh;
   width: 100vw;
+}
+
+button.submit {
+  @apply bg-green-600;
+  @apply text-primary;
+  @apply hover:border-transparent hover:bg-green-700;
 }
